@@ -1,0 +1,39 @@
+name: Canvas Poller
+
+on:
+  schedule:
+    # Every 15 minutes. GitHub may delay this a few minutes under load —
+    # that's fine for this use case.
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r poller/requirements.txt
+
+      - name: Poll Canvas
+        env:
+          CANVAS_URL: ${{ secrets.CANVAS_URL }}
+          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python poller/canvas_poller.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "canvas-poller-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add state.json
+          git diff --cached --quiet || git commit -m "Update assignment state [skip ci]"
+          git push

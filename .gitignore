@@ -1,0 +1,4 @@
+desktop_pet/config.json
+__pycache__/
+*.pyc
+.venv/
