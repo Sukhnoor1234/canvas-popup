@@ -1,0 +1,26 @@
+name: Canvas Digest
+
+on:
+  schedule:
+    # Every 2 hours. Only actually notifies if something is upcoming.
+    - cron: "0 */2 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r poller/requirements.txt
+
+      - name: Send digest (if anything is upcoming)
+        env:
+          CANVAS_ICS_URL: ${{ secrets.CANVAS_ICS_URL }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python poller/send_digest.py

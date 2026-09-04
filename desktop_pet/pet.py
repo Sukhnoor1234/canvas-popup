@@ -1,10 +1,10 @@
 """
 Desktop pixel pet that pops up with Canvas assignment reminders.
 
-Sits quietly in the bottom-right corner of your screen, blinks
-occasionally, and shows a speech bubble whenever the cloud poller
-(canvas_poller.py, running on a GitHub Actions schedule) pushes a
-message to your ntfy.sh topic.
+Stays completely hidden until the cloud side (poll.yml every 15 min, or
+digest.yml every 2 hours) pushes a message to your ntfy.sh topic — then it
+appears in the bottom-right corner with a speech bubble, and hides itself
+again after a bit. It never sits idle on screen.
 
 Setup:
   1. pip install -r requirements.txt
@@ -12,9 +12,8 @@ Setup:
      (the same NTFY_TOPIC you set as a GitHub secret).
   3. Run:  pythonw pet.py   (pythonw = no console window)
 
-Left-click the pet to dismiss its speech bubble early.
-Right-click the pet for a Quit option.
-Drag with left-click+hold to move it anywhere on screen.
+Left-click the pet or its bubble to dismiss early.
+Right-click the pet for a Quit option (only available while it's visible).
 """
 
 import json
@@ -31,7 +30,7 @@ import sprites
 CONFIG_PATH = Path(__file__).resolve().parent / "config.json"
 PIXEL_SIZE = 8
 TRANSPARENT_KEY = "#ff00ff"
-BUBBLE_SECONDS = 14
+BUBBLE_SECONDS = 20
 
 
 def load_config():
@@ -84,6 +83,8 @@ class Pet:
         self.bubble = None
         self.bubble_after_id = None
         self._drag_offset = None
+        self._dragged = False
+        self.visible = False
 
         rows, cols = sprites.GRID_SIZE
         w, h = cols * PIXEL_SIZE, rows * PIXEL_SIZE
@@ -109,15 +110,14 @@ class Pet:
         self.canvas.bind("<Button-3>", self.show_menu)
 
         self.menu = tk.Menu(root, tearoff=0)
+        self.menu.add_command(label="Dismiss", command=self.hide)
         self.menu.add_command(label="Quit pet", command=root.destroy)
 
-        self._dragged = False
-        self.draw(sprites.idle_frame())
+        self.draw(sprites.excited_frame())
+        root.withdraw()  # start hidden — nothing to say yet
 
         ListenerThread(topic, self.msg_queue).start()
         self.root.after(300, self.poll_queue)
-        self.schedule_blink()
-        self.schedule_hop()
 
     # -- drawing --------------------------------------------------------
 
@@ -133,31 +133,6 @@ class Pet:
                     x0, y0, x0 + PIXEL_SIZE, y0 + PIXEL_SIZE, fill=color, outline=""
                 )
 
-    # -- idle animation ---------------------------------------------------
-
-    def schedule_blink(self):
-        self.draw(sprites.idle_frame(blink=False))
-        self.root.after(3500, self._do_blink)
-
-    def _do_blink(self):
-        self.draw(sprites.idle_frame(blink=True))
-        self.root.after(150, self.schedule_blink)
-
-    def schedule_hop(self):
-        self.root.after(9000, self._do_hop)
-
-    def _do_hop(self):
-        x, y = self.base_x, self.base_y
-        steps = [-10, -16, -10, 0]
-        self._hop_step(x, y, steps, 0)
-
-    def _hop_step(self, x, y, steps, i):
-        if i >= len(steps):
-            self.schedule_hop()
-            return
-        self.root.geometry(f"+{x}+{y + steps[i]}")
-        self.root.after(70, lambda: self._hop_step(x, y, steps, i + 1))
-
     # -- reminders --------------------------------------------------------
 
     def poll_queue(self):
@@ -170,11 +145,16 @@ class Pet:
         self.root.after(300, self.poll_queue)
 
     def show_bubble(self, title, message):
-        self.draw(sprites.excited_frame())
         if self.bubble_after_id:
             self.root.after_cancel(self.bubble_after_id)
         if self.bubble:
             self.bubble.destroy()
+            self.bubble = None
+
+        self.root.deiconify()
+        self.root.geometry(f"+{self.base_x}+{self.base_y}")
+        self.draw(sprites.excited_frame())
+        self.visible = True
 
         self.bubble = tk.Toplevel(self.root)
         self.bubble.overrideredirect(True)
@@ -196,15 +176,19 @@ class Pet:
         bx = self.base_x + (sprites.GRID_SIZE[1] * PIXEL_SIZE) // 2 - bw // 2
         by = self.base_y - self.bubble.winfo_height() - 12
         self.bubble.geometry(f"+{bx}+{by}")
-        self.bubble.bind("<Button-1>", lambda e: self.dismiss_bubble())
+        self.bubble.bind("<Button-1>", lambda e: self.hide())
 
-        self.bubble_after_id = self.root.after(BUBBLE_SECONDS * 1000, self.dismiss_bubble)
+        self.bubble_after_id = self.root.after(BUBBLE_SECONDS * 1000, self.hide)
 
-    def dismiss_bubble(self):
+    def hide(self):
+        if self.bubble_after_id:
+            self.root.after_cancel(self.bubble_after_id)
+            self.bubble_after_id = None
         if self.bubble:
             self.bubble.destroy()
             self.bubble = None
-        self.draw(sprites.idle_frame())
+        self.root.withdraw()
+        self.visible = False
 
     # -- dragging / menu ----------------------------------------------------
 
@@ -224,7 +208,7 @@ class Pet:
 
     def on_release(self, event):
         if not self._dragged:
-            self.dismiss_bubble()
+            self.hide()
         self._drag_offset = None
 
     def show_menu(self, event):
