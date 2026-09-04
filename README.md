@@ -88,11 +88,12 @@ pythonw pet.py
 (`pythonw` instead of `python` so no console window stays open. On first
 run, Windows may ask about firewall access for Python — allow it.)
 
-You should see a little purple blob settle into the bottom-right corner of
-your screen. It'll blink occasionally and hop every so often. When a
-reminder comes through, it lights up and shows a speech bubble for ~14
-seconds (click it to dismiss early). Left-click-drag to move it anywhere;
-right-click for a Quit option.
+Nothing appears on screen at first — it's running quietly in the background,
+listening for reminders. When one comes through, a little pixel-art owl in
+a graduation cap pops up in the bottom-right corner with a speech bubble
+for ~20 seconds, then disappears again on its own (click it, or its bubble,
+to dismiss early). Left-click-drag to move it anywhere while it's visible;
+right-click for a Dismiss/Quit menu.
 
 ## 6. Make it start automatically when you log in
 
@@ -115,8 +116,12 @@ can find it with `where pythonw` in a terminal.)
   `poller/canvas_poller.py` (currently 48h / 24h / 3h before due).
 - **Poll frequency:** edit the `cron` line in
   `.github/workflows/poll.yml` (currently every 15 minutes).
-- **Pet look:** edit `desktop_pet/sprites.py` — it's just a 12x12 grid of
-  letters mapped to colors, easy to redraw or recolor.
+- **Pet look:** edit `desktop_pet/sprites.py` — it's just a 16x16 grid of
+  letters mapped to colors, easy to redraw or recolor. Open
+  `desktop_pet/preview.html` in a browser (or run
+  `python -m http.server` from `desktop_pet/` and visit it) to preview
+  edits instantly without restarting the live pet — much faster than
+  guessing blind.
 
 ## Privacy note
 
