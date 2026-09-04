@@ -25,8 +25,7 @@ jobs:
 
       - name: Poll Canvas
         env:
-          CANVAS_URL: ${{ secrets.CANVAS_URL }}
-          CANVAS_TOKEN: ${{ secrets.CANVAS_TOKEN }}
+          CANVAS_ICS_URL: ${{ secrets.CANVAS_ICS_URL }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python poller/canvas_poller.py
 

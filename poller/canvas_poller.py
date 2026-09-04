@@ -1,10 +1,14 @@
 """
-Canvas assignment poller.
+Canvas assignment poller — reads your private Canvas calendar feed (.ics).
 
-Runs on a schedule (via GitHub Actions). Checks all your active Canvas
-courses for assignments, compares against previously-seen state, and
-posts a push notification (via ntfy.sh) whenever:
-  - a brand new assignment appears
+No API token needed: the calendar feed is a separate Canvas feature (meant
+for subscribing Canvas to Google/Apple Calendar) that most schools don't
+lock down even when personal access tokens are restricted.
+
+Runs on a schedule (via GitHub Actions). Compares the feed against
+previously-seen state, and posts a push notification (via ntfy.sh)
+whenever:
+  - a brand new assignment/event with a due date appears
   - an assignment's due date changes
   - an assignment is newly within a reminder threshold (48h / 24h / 3h)
 
@@ -14,14 +18,15 @@ so the poller remembers what it already told you about.
 
 import json
 import os
+import re
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, time, timezone
 from pathlib import Path
 
 import requests
+from icalendar import Calendar
 
-CANVAS_URL = os.environ["CANVAS_URL"].rstrip("/")
-CANVAS_TOKEN = os.environ["CANVAS_TOKEN"]
+CANVAS_ICS_URL = os.environ["CANVAS_ICS_URL"]
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 
 STATE_PATH = Path(__file__).resolve().parent.parent / "state.json"
@@ -29,58 +34,59 @@ STATE_PATH = Path(__file__).resolve().parent.parent / "state.json"
 # Hours-before-due thresholds to send a reminder at.
 REMINDER_THRESHOLDS_HOURS = [48, 24, 3]
 
-# How many days after the due date to stop tracking an assignment (keeps
+# How many days after the due date to stop tracking an item (keeps
 # state.json from growing forever).
 PRUNE_AFTER_DAYS = 14
 
-HEADERS = {"Authorization": f"Bearer {CANVAS_TOKEN}"}
+COURSE_TAG_RE = re.compile(r"\[(.+?)\]\s*$")
 
 
-def canvas_get_all(path, params=None):
-    """GET a Canvas API endpoint, following pagination."""
-    url = f"{CANVAS_URL}{path}"
-    params = dict(params or {})
-    params.setdefault("per_page", 100)
-    results = []
-    while url:
-        resp = requests.get(url, headers=HEADERS, params=params, timeout=30)
-        resp.raise_for_status()
-        results.extend(resp.json())
-        # Canvas pagination is via the Link header; params only apply to the
-        # first request, subsequent ones are full URLs from the Link header.
-        params = None
-        url = None
-        for link in resp.links.values():
-            if link.get("rel") == "next":
-                url = link["url"]
-    return results
+def to_utc_iso(dt_value):
+    """Normalize an icalendar dtstart value (date or datetime) to an
+    aware UTC ISO8601 string."""
+    if dt_value is None:
+        return None
+    if isinstance(dt_value, datetime):
+        dt = dt_value
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).isoformat()
+    if isinstance(dt_value, date):
+        # All-day event with no time component; treat as end-of-day UTC.
+        dt = datetime.combine(dt_value, time(23, 59), tzinfo=timezone.utc)
+        return dt.isoformat()
+    return None
 
 
-def fetch_assignments():
-    courses = canvas_get_all("/api/v1/courses", {"enrollment_state": "active"})
-    assignments = []
-    for course in courses:
-        course_id = course.get("id")
-        course_name = course.get("name") or course.get("course_code") or f"Course {course_id}"
-        try:
-            course_assignments = canvas_get_all(
-                f"/api/v1/courses/{course_id}/assignments",
-                {"order_by": "due_at"},
-            )
-        except requests.HTTPError as e:
-            print(f"  (skipping course {course_name}: {e})", file=sys.stderr)
+def fetch_events():
+    resp = requests.get(CANVAS_ICS_URL, timeout=30)
+    resp.raise_for_status()
+    cal = Calendar.from_ical(resp.text)
+
+    events = []
+    for component in cal.walk():
+        if component.name != "VEVENT":
             continue
-        for a in course_assignments:
-            assignments.append(
-                {
-                    "id": str(a["id"]),
-                    "name": a.get("name", "Untitled assignment"),
-                    "course": course_name,
-                    "due_at": a.get("due_at"),  # ISO8601 string or None
-                    "html_url": a.get("html_url"),
-                }
-            )
-    return assignments
+        uid = str(component.get("uid"))
+        summary = str(component.get("summary") or "Untitled item")
+        dtstart = component.get("dtstart")
+        due_at = to_utc_iso(dtstart.dt) if dtstart else None
+        url = str(component.get("url") or "")
+
+        course_match = COURSE_TAG_RE.search(summary)
+        course = course_match.group(1) if course_match else "Canvas"
+        name = COURSE_TAG_RE.sub("", summary).strip()
+
+        events.append(
+            {
+                "id": uid,
+                "name": name,
+                "course": course,
+                "due_at": due_at,
+                "url": url,
+            }
+        )
+    return events
 
 
 def load_state():
@@ -107,61 +113,55 @@ def send_notification(title, message, priority="default", tags=None):
 
 
 def hours_until(due_at_iso):
-    due = datetime.fromisoformat(due_at_iso.replace("Z", "+00:00"))
+    due = datetime.fromisoformat(due_at_iso)
     now = datetime.now(timezone.utc)
     return (due - now).total_seconds() / 3600.0
 
 
 def main():
-    assignments = fetch_assignments()
+    events = fetch_events()
     state = load_state()
-    now = datetime.now(timezone.utc)
     changed = False
-
     seen_ids = set()
 
-    for a in assignments:
-        aid = a["id"]
-        seen_ids.add(aid)
-        entry = state.get(aid)
+    for e in events:
+        eid = e["id"]
+        seen_ids.add(eid)
+        entry = state.get(eid)
 
         if entry is None:
-            # Brand new assignment.
-            if a["due_at"]:
-                due_local = a["due_at"]
-                msg = f"{a['course']}\n\"{a['name']}\"\nDue: {due_local}"
+            # Brand new item.
+            if e["due_at"]:
+                msg = f"{e['course']}\n\"{e['name']}\"\nDue: {e['due_at']}"
             else:
-                msg = f"{a['course']}\n\"{a['name']}\"\n(no due date set yet)"
-            send_notification("📚 New Canvas assignment", msg, priority="default", tags=["memo"])
-            state[aid] = {
-                "name": a["name"],
-                "course": a["course"],
-                "due_at": a["due_at"],
+                msg = f"{e['course']}\n\"{e['name']}\""
+            send_notification("📚 New Canvas item", msg, priority="default", tags=["memo"])
+            state[eid] = {
+                "name": e["name"],
+                "course": e["course"],
+                "due_at": e["due_at"],
                 "notified_thresholds": [],
             }
             changed = True
             continue
 
         # Due date changed (set for the first time, or moved).
-        if a["due_at"] != entry.get("due_at"):
-            if a["due_at"]:
-                msg = f"{a['course']}\n\"{a['name']}\"\nNew due date: {a['due_at']}"
+        if e["due_at"] != entry.get("due_at"):
+            if e["due_at"]:
+                msg = f"{e['course']}\n\"{e['name']}\"\nNew due date: {e['due_at']}"
                 send_notification("📅 Canvas due date changed", msg, priority="default", tags=["calendar"])
-            entry["due_at"] = a["due_at"]
+            entry["due_at"] = e["due_at"]
             entry["notified_thresholds"] = []
             changed = True
 
         # Approaching-deadline reminders.
         if entry.get("due_at"):
-            try:
-                hrs = hours_until(entry["due_at"])
-            except ValueError:
-                hrs = None
-            if hrs is not None and hrs > 0:
+            hrs = hours_until(entry["due_at"])
+            if hrs > 0:
                 already = set(entry.get("notified_thresholds", []))
                 for threshold in REMINDER_THRESHOLDS_HOURS:
                     if hrs <= threshold and threshold not in already:
-                        msg = f"{a['course']}\n\"{a['name']}\"\nDue in about {threshold}h ({entry['due_at']})"
+                        msg = f"{e['course']}\n\"{e['name']}\"\nDue in about {threshold}h ({entry['due_at']})"
                         send_notification(
                             f"⏰ Assignment due in {threshold}h",
                             msg,
@@ -172,24 +172,19 @@ def main():
                         entry["notified_thresholds"] = sorted(already)
                         changed = True
 
-    # Prune old entries so state.json doesn't grow forever.
-    for aid in list(state.keys()):
-        entry = state[aid]
+    # Prune old / no-longer-listed entries so state.json doesn't grow forever.
+    for eid in list(state.keys()):
+        entry = state[eid]
         due_at = entry.get("due_at")
-        stale = aid not in seen_ids
-        old = False
-        if due_at:
-            try:
-                old = hours_until(due_at) < -PRUNE_AFTER_DAYS * 24
-            except ValueError:
-                old = False
+        stale = eid not in seen_ids
+        old = due_at is not None and hours_until(due_at) < -PRUNE_AFTER_DAYS * 24
         if stale or old:
-            del state[aid]
+            del state[eid]
             changed = True
 
     if changed:
         save_state(state)
-        print(f"State updated ({len(state)} tracked assignments).")
+        print(f"State updated ({len(state)} tracked items).")
     else:
         print("No changes.")
 

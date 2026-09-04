@@ -4,11 +4,16 @@ A pixel-art desktop pet that watches your Canvas courses and pops up with a
 speech bubble whenever a new assignment is posted or a due date is coming up.
 
 **How it works:** a small script runs every 15 minutes for free on GitHub's
-servers, checks Canvas for new/upcoming assignments, and pushes a
-notification through [ntfy.sh](https://ntfy.sh) (free, no account needed).
-The pet on your PC listens for those notifications and reacts to them live.
-The cloud side keeps working even when your PC is off; the pet just needs
-your PC on to actually show anything.
+servers, checks your Canvas calendar feed for new/upcoming assignments, and
+pushes a notification through [ntfy.sh](https://ntfy.sh) (free, no account
+needed). The pet on your PC listens for those notifications and reacts to
+them live. The cloud side keeps working even when your PC is off; the pet
+just needs your PC on to actually show anything.
+
+**No Canvas API token required.** This uses Canvas's private calendar feed
+(the same feature that lets you subscribe Canvas to Google/Apple Calendar)
+instead of the API — it works even if your school has disabled personal
+access tokens, since it's a completely separate Canvas feature.
 
 Your generated ntfy topic (already filled into `desktop_pet/config.json`):
 `canvaspet-564c7302-0cd`
@@ -17,18 +22,24 @@ this topic name publicly, since anyone who knows it can read (or send to) it.
 
 ---
 
-## 1. Get a Canvas API token
+## 1. Get your Canvas calendar feed URL
 
 1. Log into Canvas, go to **Account → Settings**.
-2. Scroll to **Approved Integrations** and click **+ New Access Token**.
-3. Purpose: "CanvasPet reminders" (or anything). Leave expiry blank, or set
-   a far-future date. Click **Generate Token**.
-4. Copy the token immediately — Canvas only shows it once.
-5. Also note your Canvas base URL — the part before `/courses` in your
-   browser, e.g. `https://yourschool.instructure.com`.
+2. Scroll down the right-hand sidebar to **Calendar Feed (?)**.
+3. Right-click it → **Copy Link Address** (or click it and copy the URL
+   from your browser's address bar — either way, don't just visually copy
+   it, since it's long).
+4. It'll look like:
+   `https://yourschool.instructure.com/feeds/calendars/user_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.ics`
 
-**Don't paste this token into any chat.** You'll enter it directly into
-GitHub's encrypted secrets in step 3 below.
+That long random string in the URL *is* your access control — anyone with
+this exact URL can read your assignment due dates, so treat it like a
+password: don't post it publicly. You'll paste it into GitHub's encrypted
+secrets (private, never in code) in step 3 below.
+
+If you don't see "Calendar Feed" in Settings, some schools rename or hide
+it slightly differently — search your Canvas help docs for "calendar
+feed" or "subscribe to calendar" if you can't find it.
 
 ## 2. Create a private GitHub repo and push this folder
 
@@ -52,12 +63,11 @@ git push -u origin main
 ## 3. Add repo secrets
 
 In your new GitHub repo: **Settings → Secrets and variables → Actions →
-New repository secret**. Add three:
+New repository secret**. Add two:
 
 | Name | Value |
 |---|---|
-| `CANVAS_URL` | e.g. `https://yourschool.instructure.com` |
-| `CANVAS_TOKEN` | the token from step 1 |
+| `CANVAS_ICS_URL` | the calendar feed URL from step 1 |
 | `NTFY_TOPIC` | `canvaspet-564c7302-0cd` |
 
 ## 4. Test the poller manually
@@ -112,5 +122,7 @@ can find it with `where pythonw` in a terminal.)
 
 `state.json` (assignment names/due dates) gets committed back to your repo
 by the workflow, which is why the repo should be **private**. Your Canvas
-token and Canvas URL live only in GitHub's encrypted secrets — never in the
-repo itself.
+calendar feed URL lives only in GitHub's encrypted secrets — never in the
+repo itself. If you ever think that URL leaked, go back to Canvas →
+Account → Settings and click **"reset"** next to the calendar feed to get
+a fresh one (then update the `CANVAS_ICS_URL` secret).
