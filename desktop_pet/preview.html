@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { background: #2a2a2a; display: flex; gap: 40px; padding: 30px; font-family: sans-serif; }
+  .frame { text-align: center; color: #ccc; }
+  canvas { image-rendering: pixelated; background: #444; border: 1px solid #666; }
+</style>
+</head>
+<body>
+  <div class="frame"><div>idle</div><canvas id="idle" width="480" height="480"></canvas></div>
+  <div class="frame"><div>blink</div><canvas id="blink" width="480" height="480"></canvas></div>
+  <div class="frame"><div>excited</div><canvas id="excited" width="480" height="480"></canvas></div>
+<script>
+const PALETTE = {
+  "O": "#8b5e3c", "W": "#6b4423", "F": "#d9b382", "Y": "#f4a942",
+  "P": "#1a1410", "L": "#a67c52", "B": "#e8891c", "C": "#1a1a1a",
+  "T": "#ffd23f", "Q": "#e8891c", "S": "#ffe066", "K": "#ffb6c1",
+};
+const BASE = [
+  "..CCCCCCCCCCCC..",
+  "...CCCCCCCCCC...",
+  "....CCCCCC.T....",
+  ".....OO..OO.....",
+  "OOOFFFFFFFFFFOOO",
+  "OOFFFFFFFFFFFFOO",
+  "OFFFFFFFFFFFFFFO",
+  "OFFFFFFFFFFFFFFO",
+  "OOFFFFFFFFFFFFOO",
+  "OOOFFFFBBFFFFOOO",
+  "OOFFFFFFFFFFFFOO",
+  "WWOOOOOOOOOOOOWW",
+  "WWOOOOOOOOOOOOWW",
+  "WOOOOOOOOOOOOOOW",
+  "...QQQQ..QQQQ...",
+  "....QQQ..QQQ....",
+];
+function apply(overrides) {
+  const grid = BASE.map(r => r.split(""));
+  for (const [key, ch] of Object.entries(overrides)) {
+    const [r, c] = key.split(",").map(Number);
+    grid[r][c] = ch;
+  }
+  return grid.map(r => r.join(""));
+}
+const eyeCols = [3,4,5,6,9,10,11,12];
+const idle = apply(Object.assign(
+  Object.fromEntries(eyeCols.map(c => [`6,${c}`, "Y"])),
+  {"7,3":"Y","7,4":"P","7,5":"P","7,6":"Y","7,9":"Y","7,10":"P","7,11":"P","7,12":"Y"}
+));
+const blink = apply(Object.fromEntries(eyeCols.map(c => [`7,${c}`, "L"])));
+const excited = apply(Object.assign(
+  Object.fromEntries(eyeCols.map(c => [`5,${c}`, "Y"])),
+  Object.fromEntries(eyeCols.map(c => [`6,${c}`, "Y"])),
+  {
+    "7,3":"Y","7,4":"P","7,5":"P","7,6":"Y","7,9":"Y","7,10":"P","7,11":"P","7,12":"Y",
+    "5,2":"S","5,13":"S","8,2":"K","8,13":"K","9,6":"B","9,9":"B",
+  }
+));
+function draw(canvasId, grid) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext("2d");
+  const px = canvas.width / grid[0].length;
+  grid.forEach((row, r) => {
+    [...row].forEach((ch, c) => {
+      if (ch === ".") return;
+      ctx.fillStyle = PALETTE[ch] || "magenta";
+      ctx.fillRect(c * px, r * px, px, px);
+    });
+  });
+}
+draw("idle", idle);
+draw("blink", blink);
+draw("excited", excited);
+</script>
+</body>
+</html>
