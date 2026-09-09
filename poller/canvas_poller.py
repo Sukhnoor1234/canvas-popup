@@ -100,16 +100,24 @@ def save_state(state):
 
 
 def send_notification(title, message, priority="default", tags=None):
-    requests.post(
-        f"https://ntfy.sh/{NTFY_TOPIC}",
-        data=message.encode("utf-8"),
-        headers={
-            "Title": title,
-            "Priority": priority,
-            **({"Tags": ",".join(tags)} if tags else {}),
-        },
-        timeout=15,
-    )
+    # Title/tags go through as query params, not headers -- HTTP headers are
+    # restricted to latin-1 by Python's http.client, which breaks as soon as
+    # a title contains an emoji. Query params don't have that restriction.
+    params = {"title": title, "priority": priority}
+    if tags:
+        params["tags"] = ",".join(tags)
+    try:
+        requests.post(
+            f"https://ntfy.sh/{NTFY_TOPIC}",
+            params=params,
+            data=message.encode("utf-8"),
+            timeout=15,
+        )
+    except requests.RequestException as e:
+        # Don't let one failed notification stop the whole run -- that would
+        # block state.json from saving and cause the same item to be
+        # re-attempted (and re-fail) on every future run.
+        print(f"  (notification failed, continuing: {e})", file=sys.stderr)
 
 
 def hours_until(due_at_iso):
