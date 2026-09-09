@@ -1,1 +1,80 @@
-{}
+{
+  "event-assignment-2559793": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-09-25T23:59:00+00:00",
+    "name": "\ud83d\udd35 Quiz 1: start to PM Frameworks",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559794": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-11-06T23:59:00+00:00",
+    "name": "\ud83d\udd35 Quiz 3: Schedule to Resource planning",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559795": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-12-11T23:59:00+00:00",
+    "name": "\ud83d\udd35 Quiz 4: Budget planning to Implementation and closure",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559796": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-10-23T23:59:00+00:00",
+    "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559809": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-09-15T03:00:00+00:00",
+    "name": "Sign up for simulation - can be done before classes",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559810": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-10-17T23:59:00+00:00",
+    "name": "\u26a0\ufe0f Prerequisite to Lab 6",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559811": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-10-06T23:59:00+00:00",
+    "name": "\ud83d\udfe0 Simulation - Scenario A",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559812": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-10-15T23:59:00+00:00",
+    "name": "\ud83d\udfe0 Simulation - Scenario B and F",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559813": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-11-19T23:59:00+00:00",
+    "name": "\ud83d\udfe0 Simulation - Scenario D and E",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559815": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-10-25T23:59:00+00:00",
+    "name": "\ud83d\udfe1 Reflection on Guest Lecture - Asima Zahid",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559816": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-09-20T23:59:00+00:00",
+    "name": "\ud83d\udfe1 Reflection on Guest Lecture - Ahmed Farag",
+    "notified_thresholds": []
+  },
+  "event-assignment-2559819": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-10-09T23:59:00+00:00",
+    "name": "\ud83d\udfe1 Reflection on Guest Lecture - Susan Bush",
+    "notified_thresholds": []
+  },
+  "event-calendar-event-1426555": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-09-08T22:30:00+00:00",
+    "name": "Introduction",
+    "notified_thresholds": []
+  }
+}
