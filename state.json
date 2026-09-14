@@ -196,6 +196,7 @@
     "due_at": "2026-09-15T03:00:00+00:00",
     "name": "Sign up for simulation - can be done before classes",
     "notified_thresholds": [
+      24,
       48
     ]
   },
