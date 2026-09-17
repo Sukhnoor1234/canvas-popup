@@ -15,7 +15,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "2) Database Introduction",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543671": {
     "course": "COSC_O 304 001 2026W1",
@@ -39,7 +41,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.4) Relational Keys Quiz #3",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543675": {
     "course": "COSC_O 304 001 2026W1",
@@ -51,7 +55,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.3) Relational Keys Quiz #2",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543677": {
     "course": "COSC_O 304 001 2026W1",
@@ -69,7 +75,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.2) Relational Model Keys",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543681": {
     "course": "COSC_O 304 001 2026W1",
@@ -105,7 +113,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.1) Relational Model",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543687": {
     "course": "COSC_O 304 001 2026W1",
@@ -117,7 +127,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "5) SQL DDL",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543689": {
     "course": "COSC_O 304 001 2026W1",
@@ -135,13 +147,17 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "4) Relational Algebra",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543692": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.5) Relational Review",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543693": {
     "course": "COSC_O 304 001 2026W1",
