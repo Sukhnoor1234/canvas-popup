@@ -16,6 +16,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "2) Database Introduction",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -43,6 +44,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.4) Relational Keys Quiz #3",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -58,6 +60,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.3) Relational Keys Quiz #2",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -79,6 +82,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.2) Relational Model Keys",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -118,6 +122,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.1) Relational Model",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -133,6 +138,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "5) SQL DDL",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -154,6 +160,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "4) Relational Algebra",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -163,6 +170,7 @@
     "due_at": "2026-09-18T23:59:00+00:00",
     "name": "3.5) Relational Review",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
