@@ -274,6 +274,7 @@
     "due_at": "2026-09-20T23:59:00+00:00",
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Ahmed Farag",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -304,6 +305,7 @@
     "due_at": "2026-09-20T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 1: Project Failure - Group (COSC_O 305 L02 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
