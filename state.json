@@ -276,6 +276,7 @@
     "due_at": "2026-09-21T23:59:00+00:00",
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Ahmed Farag",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
