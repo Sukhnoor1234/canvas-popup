@@ -306,6 +306,7 @@
     "due_at": "2026-09-22T23:59:00+00:00",
     "name": "Assignment #2",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -315,6 +316,7 @@
     "due_at": "2026-09-22T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 1: Project Failure - Group (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -367,12 +369,6 @@
     "name": "\ud83d\udfe2 Lab 9: Cost and Resource Considerations - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
   },
-  "event-calendar-event-1426555": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-09-08T22:30:00+00:00",
-    "name": "Introduction",
-    "notified_thresholds": []
-  },
   "event-calendar-event-1454487": {
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-09-10T22:30:00+00:00",
@@ -393,6 +389,24 @@
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-09-17T22:30:00+00:00",
     "name": "Economic Applications & Exponential Functions",
+    "notified_thresholds": []
+  },
+  "event-calendar-event-1472531": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-09-22T22:30:00+00:00",
+    "name": "Log functions, Present & Future Value, Inverse Functions",
+    "notified_thresholds": []
+  },
+  "event-calendar-event-1472532": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-09-24T22:30:00+00:00",
+    "name": "More about Functions & Sinusoidal Functions",
+    "notified_thresholds": []
+  },
+  "event-calendar-event-1472535": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-10-01T22:30:00+00:00",
+    "name": "Test #1 -",
     "notified_thresholds": []
   }
 }
