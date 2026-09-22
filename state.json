@@ -26,6 +26,7 @@
     "due_at": "2026-09-22T23:59:00+00:00",
     "name": "6) SQL SELECT",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -302,6 +303,7 @@
     "due_at": "2026-09-22T23:59:00+00:00",
     "name": "Assignment #2",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -310,6 +312,7 @@
     "due_at": "2026-09-22T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 1: Project Failure - Group (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
