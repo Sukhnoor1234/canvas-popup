@@ -23,12 +23,9 @@
   },
   "event-assignment-2543671": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-22T23:59:00+00:00",
+    "due_at": "2026-09-24T23:59:00+00:00",
     "name": "6) SQL SELECT",
-    "notified_thresholds": [
-      24,
-      48
-    ]
+    "notified_thresholds": []
   },
   "event-assignment-2543672": {
     "course": "COSC_O 304 001 2026W1",
