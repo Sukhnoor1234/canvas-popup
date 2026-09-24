@@ -10,6 +10,7 @@
     "due_at": "2026-09-24T23:59:00+00:00",
     "name": "7.1) SQL Aggregation",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -28,6 +29,7 @@
     "due_at": "2026-09-24T23:59:00+00:00",
     "name": "6) SQL SELECT",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -201,7 +203,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-25T23:59:00+00:00",
     "name": "Lab 1",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543699": {
     "course": "COSC_O 304 001 2026W1",
@@ -219,7 +223,9 @@
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-09-25T23:59:00+00:00",
     "name": "\ud83d\udd35 Quiz 1: start to PM Frameworks",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2559794": {
     "course": "COSC_O 305 101 2026W1",
@@ -412,6 +418,7 @@
     "due_at": "2026-09-24T22:30:00+00:00",
     "name": "More about Functions & Sinusoidal Functions",
     "notified_thresholds": [
+      24,
       48
     ]
   },
