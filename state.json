@@ -253,16 +253,6 @@
     "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
     "notified_thresholds": []
   },
-  "event-assignment-2559809": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-09-15T03:00:00+00:00",
-    "name": "Sign up for simulation - can be done before classes",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2559810": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-17T23:59:00+00:00",
