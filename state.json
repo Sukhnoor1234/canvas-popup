@@ -10,6 +10,7 @@
     "due_at": "2026-09-29T23:59:00+00:00",
     "name": "7.1) SQL Aggregation",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -39,6 +40,7 @@
     "due_at": "2026-09-29T23:59:00+00:00",
     "name": "7.2) SQL Subqueries",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -225,6 +227,18 @@
     "name": "Lab 3",
     "notified_thresholds": []
   },
+  "event-assignment-2543701": {
+    "course": "COSC_O 304 001 2026W1",
+    "due_at": "2026-10-16T23:59:00+00:00",
+    "name": "Lab 4",
+    "notified_thresholds": []
+  },
+  "event-assignment-2543702": {
+    "course": "COSC_O 304 001 2026W1",
+    "due_at": "2026-10-23T23:59:00+00:00",
+    "name": "Lab 5",
+    "notified_thresholds": []
+  },
   "event-assignment-2559793": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-09-25T23:59:00+00:00",
@@ -324,6 +338,7 @@
     "due_at": "2026-09-29T23:59:00+00:00",
     "name": "Assignment #3",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -343,6 +358,7 @@
     "due_at": "2026-09-29T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 2: Project Planning, Stakeholder and Risk Analysis - Group (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -389,16 +405,6 @@
     "name": "\ud83d\udfe2 Lab 9: Cost and Resource Considerations - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
   },
-  "event-calendar-event-1457957": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-09-15T22:30:00+00:00",
-    "name": "Average Rate of Change & More Applications to Economics",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-calendar-event-1467722": {
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-09-17T22:30:00+00:00",
@@ -424,7 +430,9 @@
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-10-01T22:30:00+00:00",
     "name": "Test #1 -",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-calendar-event-1480387": {
     "course": "MATH_O 116 001 2026W1",
