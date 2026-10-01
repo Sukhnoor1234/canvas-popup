@@ -166,6 +166,7 @@
     "due_at": "2026-10-01T23:59:00+00:00",
     "name": "8) Database Design",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -221,7 +222,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-02T23:59:00+00:00",
     "name": "Lab 2",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543700": {
     "course": "COSC_O 304 001 2026W1",
@@ -423,6 +426,7 @@
     "due_at": "2026-10-01T22:30:00+00:00",
     "name": "Test #1 -",
     "notified_thresholds": [
+      24,
       48
     ]
   },
