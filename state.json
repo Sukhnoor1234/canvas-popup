@@ -15,16 +15,6 @@
       48
     ]
   },
-  "event-assignment-2543669": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "2) Database Introduction",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543671": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-09-24T23:59:00+00:00",
@@ -51,31 +41,11 @@
     "name": "20) JSON",
     "notified_thresholds": []
   },
-  "event-assignment-2543674": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "3.4) Relational Keys Quiz #3",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543675": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-24T23:59:00+00:00",
     "name": "22) Normalization",
     "notified_thresholds": []
-  },
-  "event-assignment-2543676": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "3.3) Relational Keys Quiz #2",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-2543677": {
     "course": "COSC_O 304 001 2026W1",
@@ -88,16 +58,6 @@
     "due_at": "2026-10-20T23:59:00+00:00",
     "name": "13) Python/R DB Programming",
     "notified_thresholds": []
-  },
-  "event-assignment-2543680": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "3.2) Relational Model Keys",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-2543681": {
     "course": "COSC_O 304 001 2026W1",
@@ -129,31 +89,11 @@
     "name": "11) ER to Relational",
     "notified_thresholds": []
   },
-  "event-assignment-2543686": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "3.1) Relational Model",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543687": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-26T23:59:00+00:00",
     "name": "23) Database Hosting",
     "notified_thresholds": []
-  },
-  "event-assignment-2543688": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "5) SQL DDL",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-2543689": {
     "course": "COSC_O 304 001 2026W1",
@@ -165,26 +105,6 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-01T23:59:00+00:00",
     "name": "8) Database Design",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
-  "event-assignment-2543691": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "4) Relational Algebra",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
-  "event-assignment-2543692": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-18T23:59:00+00:00",
-    "name": "3.5) Relational Review",
     "notified_thresholds": [
       3,
       24,
