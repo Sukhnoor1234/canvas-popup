@@ -122,6 +122,7 @@
     "due_at": "2026-10-06T23:59:00+00:00",
     "name": "9) ER Design",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -214,6 +215,7 @@
     "due_at": "2026-10-06T23:59:00+00:00",
     "name": "\ud83d\udfe0 Simulation - Scenario A",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -234,16 +236,6 @@
     "due_at": "2026-10-25T23:59:00+00:00",
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Asima Zahid",
     "notified_thresholds": []
-  },
-  "event-assignment-2559816": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-09-21T23:59:00+00:00",
-    "name": "\ud83d\udfe1 Reflection on Guest Lecture - Ahmed Farag",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-2559819": {
     "course": "COSC_O 305 101 2026W1",
