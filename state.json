@@ -63,7 +63,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-08T23:59:00+00:00",
     "name": "10) EER",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543682": {
     "course": "COSC_O 304 001 2026W1",
@@ -87,7 +89,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-08T23:59:00+00:00",
     "name": "11) ER to Relational",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543687": {
     "course": "COSC_O 304 001 2026W1",
@@ -245,16 +249,6 @@
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Susan Bush",
     "notified_thresholds": []
   },
-  "event-assignment-2588501": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-09-22T23:59:00+00:00",
-    "name": "Assignment #2",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2590647": {
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-09-29T23:59:00+00:00",
@@ -265,15 +259,11 @@
       48
     ]
   },
-  "event-assignment-override-523147": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-09-22T23:59:00+00:00",
-    "name": "\ud83d\udfe2 Lab 1: Project Failure - Group (COSC_O 305 L04 2026W1)",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
+  "event-assignment-2596971": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-10-02T00:00:00+00:00",
+    "name": "Test #1",
+    "notified_thresholds": []
   },
   "event-assignment-override-523148": {
     "course": "COSC_O 305 101 2026W1",
