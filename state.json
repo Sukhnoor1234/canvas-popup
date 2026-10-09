@@ -156,6 +156,7 @@
     "due_at": "2026-10-09T23:59:00+00:00",
     "name": "Lab 3",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -245,6 +246,7 @@
     "due_at": "2026-10-09T23:59:00+00:00",
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Susan Bush",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
