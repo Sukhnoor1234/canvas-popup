@@ -131,16 +131,6 @@
     "name": "19) XML",
     "notified_thresholds": []
   },
-  "event-assignment-2543697": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-25T23:59:00+00:00",
-    "name": "Lab 1",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543699": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-02T23:59:00+00:00",
@@ -178,16 +168,6 @@
     "due_at": "2026-12-04T23:59:00+00:00",
     "name": "SQL Bonus Lab",
     "notified_thresholds": []
-  },
-  "event-assignment-2559793": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-09-25T23:59:00+00:00",
-    "name": "\ud83d\udd35 Quiz 1: start to PM Frameworks",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-2559794": {
     "course": "COSC_O 305 101 2026W1",
