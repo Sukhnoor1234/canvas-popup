@@ -322,5 +322,23 @@
     "due_at": "2026-09-29T22:30:00+00:00",
     "name": "Instantaneous rate of change & the derivative function",
     "notified_thresholds": []
+  },
+  "event-calendar-event-1491908": {
+    "course": "COSC_O 304 001 2026W1",
+    "due_at": "2026-10-14T00:00:00+00:00",
+    "name": "Midterm Exam #1 - COSC 304",
+    "notified_thresholds": []
+  },
+  "event-calendar-event-1491909": {
+    "course": "COSC_O 304 001 2026W1",
+    "due_at": "2026-11-04T01:00:00+00:00",
+    "name": "Midterm Exam #2 - COSC 304",
+    "notified_thresholds": []
+  },
+  "event-calendar-event-1491910": {
+    "course": "COSC_O 304 001 2026W1",
+    "due_at": "2026-12-18T03:00:00+00:00",
+    "name": "COSC 304 Final Exam",
+    "notified_thresholds": []
   }
 }
