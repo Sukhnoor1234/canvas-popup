@@ -5,26 +5,6 @@
     "name": "15) Triggers",
     "notified_thresholds": []
   },
-  "event-assignment-2543668": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-29T23:59:00+00:00",
-    "name": "7.1) SQL Aggregation",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
-  "event-assignment-2543672": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-09-29T23:59:00+00:00",
-    "name": "7.2) SQL Subqueries",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543673": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-17T23:59:00+00:00",
@@ -63,7 +43,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-15T23:59:00+00:00",
     "name": "12) DB Programming",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543683": {
     "course": "COSC_O 304 001 2026W1",
@@ -207,7 +189,9 @@
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-15T23:59:00+00:00",
     "name": "\ud83d\udfe0 Simulation - Scenario B and F",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2559813": {
     "course": "COSC_O 305 101 2026W1",
@@ -231,16 +215,6 @@
       48
     ]
   },
-  "event-assignment-2590647": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-09-29T23:59:00+00:00",
-    "name": "Assignment #3",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2596971": {
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-10-02T00:00:00+00:00",
@@ -251,15 +225,7 @@
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-10-15T23:59:00+00:00",
     "name": "Assignment #4",
-    "notified_thresholds": []
-  },
-  "event-assignment-override-523148": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-09-29T23:59:00+00:00",
-    "name": "\ud83d\udfe2 Lab 2: Project Planning, Stakeholder and Risk Analysis - Group (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
-      3,
-      24,
       48
     ]
   },
@@ -317,12 +283,6 @@
       24,
       48
     ]
-  },
-  "event-calendar-event-1480387": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-09-29T22:30:00+00:00",
-    "name": "Instantaneous rate of change & the derivative function",
-    "notified_thresholds": []
   },
   "event-calendar-event-1491908": {
     "course": "COSC_O 304 001 2026W1",
