@@ -130,6 +130,7 @@
     "due_at": "2026-10-16T23:59:00+00:00",
     "name": "Lab 4",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
