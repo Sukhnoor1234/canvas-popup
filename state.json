@@ -160,6 +160,7 @@
     "due_at": "2026-10-17T23:59:00+00:00",
     "name": "\u26a0\ufe0f Prerequisite to Lab 6",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
