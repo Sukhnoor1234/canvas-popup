@@ -133,6 +133,12 @@
     "name": "Lab 5",
     "notified_thresholds": []
   },
+  "event-assignment-2543703": {
+    "course": "COSC_O 304 001 2026W1",
+    "due_at": "2026-10-30T23:59:00+00:00",
+    "name": "Lab 6",
+    "notified_thresholds": []
+  },
   "event-assignment-2543712": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-12-04T23:59:00+00:00",
@@ -324,6 +330,7 @@
     "due_at": "2026-10-20T22:30:00+00:00",
     "name": "Exp, Log, and Chain Rule",
     "notified_thresholds": [
+      24,
       48
     ]
   },
