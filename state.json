@@ -27,7 +27,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-20T23:59:00+00:00",
     "name": "13) Python/R DB Programming",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543681": {
     "course": "COSC_O 304 001 2026W1",
@@ -127,7 +129,7 @@
   },
   "event-assignment-2543702": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-23T23:59:00+00:00",
+    "due_at": "2026-10-28T23:59:00+00:00",
     "name": "Lab 5",
     "notified_thresholds": []
   },
@@ -223,6 +225,12 @@
     "name": "In-Class Scope Planning",
     "notified_thresholds": []
   },
+  "event-assignment-2601905": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-10-22T23:59:00+00:00",
+    "name": "Assignment #5",
+    "notified_thresholds": []
+  },
   "event-assignment-override-523149": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-13T23:59:00+00:00",
@@ -237,7 +245,9 @@
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-20T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 4: Financial Analysis - Individual (COSC_O 305 L04 2026W1)",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-override-523154": {
     "course": "COSC_O 305 101 2026W1",
@@ -313,7 +323,9 @@
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-10-20T22:30:00+00:00",
     "name": "Exp, Log, and Chain Rule",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-calendar-event-1496256": {
     "course": "MATH_O 116 001 2026W1",
