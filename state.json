@@ -28,6 +28,7 @@
     "due_at": "2026-10-20T23:59:00+00:00",
     "name": "13) Python/R DB Programming",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -252,6 +253,7 @@
     "due_at": "2026-10-20T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 4: Financial Analysis - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
