@@ -328,6 +328,7 @@
     "due_at": "2026-10-22T22:30:00+00:00",
     "name": "Product & Quotient Rule",
     "notified_thresholds": [
+      24,
       48
     ]
   },
