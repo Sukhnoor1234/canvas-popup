@@ -86,6 +86,7 @@
     "due_at": "2026-10-22T23:59:00+00:00",
     "name": "14) DB Web Programming",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -155,7 +156,9 @@
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-23T23:59:00+00:00",
     "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2559810": {
     "course": "COSC_O 305 101 2026W1",
@@ -220,6 +223,7 @@
     "due_at": "2026-10-22T23:59:00+00:00",
     "name": "Assignment #5",
     "notified_thresholds": [
+      24,
       48
     ]
   },
