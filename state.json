@@ -7,13 +7,13 @@
   },
   "event-assignment-2543673": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-18T07:59:00+00:00",
+    "due_at": "2026-11-17T23:59:00+00:00",
     "name": "20) JSON",
     "notified_thresholds": []
   },
   "event-assignment-2543675": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-25T07:59:00+00:00",
+    "due_at": "2026-11-24T23:59:00+00:00",
     "name": "22) Normalization",
     "notified_thresholds": []
   },
@@ -33,16 +33,6 @@
       48
     ]
   },
-  "event-assignment-2543681": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-08T23:59:00+00:00",
-    "name": "10) EER",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543682": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-15T23:59:00+00:00",
@@ -55,7 +45,7 @@
   },
   "event-assignment-2543683": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-18T07:59:00+00:00",
+    "due_at": "2026-11-17T23:59:00+00:00",
     "name": "21) NoSQL",
     "notified_thresholds": []
   },
@@ -65,19 +55,9 @@
     "name": "17) Security",
     "notified_thresholds": []
   },
-  "event-assignment-2543685": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-08T23:59:00+00:00",
-    "name": "11) ER to Relational",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543687": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-27T07:59:00+00:00",
+    "due_at": "2026-11-26T23:59:00+00:00",
     "name": "23) Database Hosting",
     "notified_thresholds": []
   },
@@ -99,7 +79,7 @@
   },
   "event-assignment-2543695": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-06T07:59:00+00:00",
+    "due_at": "2026-11-05T23:59:00+00:00",
     "name": "19) XML",
     "notified_thresholds": []
   },
@@ -137,19 +117,19 @@
   },
   "event-assignment-2543712": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-12-05T07:59:00+00:00",
+    "due_at": "2026-12-04T23:59:00+00:00",
     "name": "SQL Bonus Lab",
     "notified_thresholds": []
   },
   "event-assignment-2559794": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-11-07T07:59:00+00:00",
+    "due_at": "2026-11-06T23:59:00+00:00",
     "name": "\ud83d\udd35 Quiz 3: Schedule to Resource planning",
     "notified_thresholds": []
   },
   "event-assignment-2559795": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-12-12T07:59:00+00:00",
+    "due_at": "2026-12-11T23:59:00+00:00",
     "name": "\ud83d\udd35 Quiz 4: Budget planning to Implementation and closure",
     "notified_thresholds": []
   },
@@ -158,6 +138,7 @@
     "due_at": "2026-10-23T23:59:00+00:00",
     "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -183,7 +164,7 @@
   },
   "event-assignment-2559813": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-11-20T07:59:00+00:00",
+    "due_at": "2026-11-19T23:59:00+00:00",
     "name": "\ud83d\udfe0 Simulation - Scenario D and E",
     "notified_thresholds": []
   },
@@ -257,25 +238,25 @@
   },
   "event-assignment-override-523155": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-11-04T07:59:00+00:00",
+    "due_at": "2026-11-03T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 6: Gantt Chart  - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
   },
   "event-assignment-override-523156": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-11-18T07:59:00+00:00",
+    "due_at": "2026-11-17T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 7: CPM, PERT - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
   },
   "event-assignment-override-523157": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-11-25T07:59:00+00:00",
+    "due_at": "2026-11-24T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 8: Estimating with PERT and PERT-beta - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
   },
   "event-assignment-override-523159": {
     "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-12-02T07:59:00+00:00",
+    "due_at": "2026-12-01T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 9: Cost and Resource Considerations - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
   },
@@ -291,19 +272,19 @@
   },
   "event-calendar-event-1491909": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-04T01:00:00+00:00",
+    "due_at": "2026-11-04T00:00:00+00:00",
     "name": "Midterm Exam #2 - COSC 304",
     "notified_thresholds": []
   },
   "event-calendar-event-1491910": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-12-18T03:00:00+00:00",
+    "due_at": "2026-12-18T02:00:00+00:00",
     "name": "COSC 304 Final Exam",
     "notified_thresholds": []
   },
   "event-calendar-event-1496252": {
     "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-11-03T23:30:00+00:00",
+    "due_at": "2026-11-03T22:30:00+00:00",
     "name": "Test #2",
     "notified_thresholds": []
   },
