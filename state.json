@@ -138,6 +138,7 @@
     "due_at": "2026-10-23T23:59:00+00:00",
     "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
