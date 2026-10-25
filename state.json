@@ -164,6 +164,7 @@
     "due_at": "2026-10-25T23:59:00+00:00",
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Asima Zahid",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
