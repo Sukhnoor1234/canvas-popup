@@ -316,6 +316,7 @@
     "due_at": "2026-10-27T22:30:00+00:00",
     "name": "Periodic Functions & Computing Derivatives",
     "notified_thresholds": [
+      24,
       48
     ]
   }
