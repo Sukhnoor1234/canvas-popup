@@ -4,6 +4,7 @@
     "due_at": "2026-10-27T23:59:00+00:00",
     "name": "15) Triggers",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -78,6 +79,7 @@
     "due_at": "2026-10-27T23:59:00+00:00",
     "name": "16) Views",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -101,7 +103,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-28T23:59:00+00:00",
     "name": "Lab 5",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543703": {
     "course": "COSC_O 304 001 2026W1",
@@ -224,6 +228,7 @@
     "due_at": "2026-10-27T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 5: Project Charter and WBS  - Group (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
