@@ -209,6 +209,12 @@
       48
     ]
   },
+  "event-assignment-2606804": {
+    "course": "MATH_O 116 001 2026W1",
+    "due_at": "2026-11-01T23:59:00+00:00",
+    "name": "Assignment #6",
+    "notified_thresholds": []
+  },
   "event-assignment-override-523149": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-13T23:59:00+00:00",
