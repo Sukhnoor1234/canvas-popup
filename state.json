@@ -25,7 +25,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-29T23:59:00+00:00",
     "name": "18) Transactions",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543678": {
     "course": "COSC_O 304 001 2026W1",
@@ -57,7 +59,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-10-29T23:59:00+00:00",
     "name": "17) Security",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543687": {
     "course": "COSC_O 304 001 2026W1",
@@ -106,6 +110,7 @@
     "due_at": "2026-10-28T23:59:00+00:00",
     "name": "Lab 5",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -223,16 +228,6 @@
     "name": "Test #2",
     "notified_thresholds": []
   },
-  "event-assignment-override-523149": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-10-13T23:59:00+00:00",
-    "name": "\ud83d\udfe2 Lab 3: Detailed Stakeholder Analysis - Group (COSC_O 305 L04 2026W1)",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-override-523150": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-20T23:59:00+00:00",
@@ -276,16 +271,6 @@
     "due_at": "2026-12-01T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 9: Cost and Resource Considerations - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": []
-  },
-  "event-calendar-event-1491908": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-14T00:00:00+00:00",
-    "name": "Midterm Exam #1 - COSC 304",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-calendar-event-1491909": {
     "course": "COSC_O 304 001 2026W1",
