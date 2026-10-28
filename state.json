@@ -110,6 +110,7 @@
     "due_at": "2026-10-28T23:59:00+00:00",
     "name": "Lab 5",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
