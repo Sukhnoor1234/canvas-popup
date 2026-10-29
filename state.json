@@ -26,6 +26,7 @@
     "due_at": "2026-10-29T23:59:00+00:00",
     "name": "18) Transactions",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -61,6 +62,7 @@
     "due_at": "2026-10-29T23:59:00+00:00",
     "name": "17) Security",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
