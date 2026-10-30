@@ -41,16 +41,6 @@
       48
     ]
   },
-  "event-assignment-2543682": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-15T23:59:00+00:00",
-    "name": "12) DB Programming",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543683": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-17T23:59:00+00:00",
@@ -169,16 +159,6 @@
       48
     ]
   },
-  "event-assignment-2559812": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-10-15T23:59:00+00:00",
-    "name": "\ud83d\udfe0 Simulation - Scenario B and F",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2559813": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-11-19T23:59:00+00:00",
@@ -189,16 +169,6 @@
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-25T23:59:00+00:00",
     "name": "\ud83d\udfe1 Reflection on Guest Lecture - Asima Zahid",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
-  "event-assignment-2598428": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-10-15T23:59:00+00:00",
-    "name": "Assignment #4",
     "notified_thresholds": [
       3,
       24,
@@ -287,12 +257,6 @@
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-11-03T22:30:00+00:00",
     "name": "Test #2",
-    "notified_thresholds": []
-  },
-  "event-calendar-event-1496254": {
-    "course": "MATH_O 116 001 2026W1",
-    "due_at": "2026-10-15T22:30:00+00:00",
-    "name": "Derivative Formulas",
     "notified_thresholds": []
   },
   "event-calendar-event-1496255": {
