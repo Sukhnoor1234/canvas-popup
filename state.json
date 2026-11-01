@@ -103,7 +103,9 @@
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-02T23:59:00+00:00",
     "name": "Lab 6",
-    "notified_thresholds": []
+    "notified_thresholds": [
+      48
+    ]
   },
   "event-assignment-2543704": {
     "course": "COSC_O 304 001 2026W1",
@@ -133,16 +135,6 @@
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-10-23T23:59:00+00:00",
     "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
-  "event-assignment-2559810": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-10-17T23:59:00+00:00",
-    "name": "\u26a0\ufe0f Prerequisite to Lab 6",
     "notified_thresholds": [
       3,
       24,
@@ -180,6 +172,7 @@
     "due_at": "2026-11-01T23:59:00+00:00",
     "name": "Assignment #6",
     "notified_thresholds": [
+      24,
       48
     ]
   },
