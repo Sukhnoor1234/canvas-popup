@@ -172,6 +172,7 @@
     "due_at": "2026-11-01T23:59:00+00:00",
     "name": "Assignment #6",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
