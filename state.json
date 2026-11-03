@@ -183,6 +183,7 @@
     "due_at": "2026-11-04T00:00:00+00:00",
     "name": "Test #2",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -211,6 +212,7 @@
     "due_at": "2026-11-03T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 6: Gantt Chart  - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -237,6 +239,7 @@
     "due_at": "2026-11-04T00:00:00+00:00",
     "name": "Midterm Exam #2 - COSC 304",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -251,6 +254,7 @@
     "due_at": "2026-11-03T22:30:00+00:00",
     "name": "Test #2",
     "notified_thresholds": [
+      24,
       48
     ]
   },
