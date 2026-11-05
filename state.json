@@ -78,6 +78,7 @@
     "due_at": "2026-11-05T23:59:00+00:00",
     "name": "19) XML",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
