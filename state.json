@@ -115,6 +115,7 @@
     "due_at": "2026-11-06T23:59:00+00:00",
     "name": "\ud83d\udd35 Quiz 3: Schedule to Resource planning",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
