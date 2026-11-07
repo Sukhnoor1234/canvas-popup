@@ -126,16 +126,6 @@
     "name": "\ud83d\udd35 Quiz 4: Budget planning to Implementation and closure",
     "notified_thresholds": []
   },
-  "event-assignment-2559796": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-10-23T23:59:00+00:00",
-    "name": "\ud83d\udd35  Quiz 2: Stakeholder to Scope Planning",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2559813": {
     "course": "COSC_O 305 101 2026W1",
     "due_at": "2026-11-19T23:59:00+00:00",
