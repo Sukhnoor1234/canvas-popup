@@ -1,14 +1,4 @@
 {
-  "event-assignment-2543667": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-27T23:59:00+00:00",
-    "name": "15) Triggers",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543673": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-17T23:59:00+00:00",
@@ -52,16 +42,6 @@
     "due_at": "2026-11-26T23:59:00+00:00",
     "name": "23) Database Hosting",
     "notified_thresholds": []
-  },
-  "event-assignment-2543693": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-27T23:59:00+00:00",
-    "name": "16) Views",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-2543695": {
     "course": "COSC_O 304 001 2026W1",
@@ -175,16 +155,6 @@
     "due_at": "2026-11-16T23:59:00+00:00",
     "name": "Assignment #7",
     "notified_thresholds": []
-  },
-  "event-assignment-override-523154": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-10-27T23:59:00+00:00",
-    "name": "\ud83d\udfe2 Lab 5: Project Charter and WBS  - Group (COSC_O 305 L04 2026W1)",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
   },
   "event-assignment-override-523155": {
     "course": "COSC_O 305 101 2026W1",
