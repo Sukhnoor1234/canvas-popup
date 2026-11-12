@@ -59,16 +59,6 @@
     "name": "Lab 10",
     "notified_thresholds": []
   },
-  "event-assignment-2543702": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-10-28T23:59:00+00:00",
-    "name": "Lab 5",
-    "notified_thresholds": [
-      3,
-      24,
-      48
-    ]
-  },
   "event-assignment-2543703": {
     "course": "COSC_O 304 001 2026W1",
     "due_at": "2026-11-02T23:59:00+00:00",
