@@ -4,6 +4,7 @@
     "due_at": "2026-11-17T23:59:00+00:00",
     "name": "20) JSON",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -18,6 +19,7 @@
     "due_at": "2026-11-17T23:59:00+00:00",
     "name": "21) NoSQL",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -43,21 +45,11 @@
     "name": "Lab 10",
     "notified_thresholds": []
   },
-  "event-assignment-2543703": {
-    "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-02T23:59:00+00:00",
-    "name": "Lab 6",
-    "notified_thresholds": [
-      24,
-      48
-    ]
-  },
   "event-assignment-2543704": {
     "course": "COSC_O 304 001 2026W1",
-    "due_at": "2026-11-16T23:59:00+00:00",
+    "due_at": "2026-11-18T23:59:00+00:00",
     "name": "Lab 7",
     "notified_thresholds": [
-      24,
       48
     ]
   },
@@ -141,6 +133,7 @@
     "due_at": "2026-11-17T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 7: CPM, PERT - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
