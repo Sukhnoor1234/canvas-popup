@@ -91,12 +91,6 @@
     "name": "\ud83d\udfe0 Simulation - Scenario D and E",
     "notified_thresholds": []
   },
-  "event-assignment-2610574": {
-    "course": "COSC_O 305 101 2026W1",
-    "due_at": "2026-11-04T18:30:00+00:00",
-    "name": "In-Class 12 - Budget Planning",
-    "notified_thresholds": []
-  },
   "event-assignment-2612715": {
     "course": "MATH_O 116 001 2026W1",
     "due_at": "2026-11-16T23:59:00+00:00",
@@ -105,6 +99,12 @@
       24,
       48
     ]
+  },
+  "event-assignment-2616487": {
+    "course": "COSC_O 305 101 2026W1",
+    "due_at": "2026-11-18T18:30:00+00:00",
+    "name": "In-Class 14 - Quality Planning",
+    "notified_thresholds": []
   },
   "event-assignment-override-523156": {
     "course": "COSC_O 305 101 2026W1",
