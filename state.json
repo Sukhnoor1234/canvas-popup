@@ -13,6 +13,7 @@
     "due_at": "2026-11-24T23:59:00+00:00",
     "name": "22) Normalization",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -79,6 +80,7 @@
     "due_at": "2026-11-24T23:59:00+00:00",
     "name": "\ud83d\udfe0 Simulation - Scenario D and E",
     "notified_thresholds": [
+      24,
       48
     ]
   },
@@ -123,6 +125,7 @@
     "due_at": "2026-11-24T23:59:00+00:00",
     "name": "\ud83d\udfe2 Lab 8: Estimating with PERT and PERT-beta - Individual (COSC_O 305 L04 2026W1)",
     "notified_thresholds": [
+      24,
       48
     ]
   },
