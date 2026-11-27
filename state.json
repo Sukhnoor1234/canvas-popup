@@ -66,6 +66,7 @@
     "due_at": "2026-11-27T23:59:00+00:00",
     "name": "Lab 9",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
@@ -117,6 +118,7 @@
     "due_at": "2026-11-27T23:59:00+00:00",
     "name": "Assignment #8",
     "notified_thresholds": [
+      3,
       24,
       48
     ]
